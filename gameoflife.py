@@ -5,6 +5,7 @@ from expecter import expect
 class GameOfLife(object):
     def __init__(self, board):
         self.board = board
+        self.xsize = math.sqrt(len(board))
 
     @property
     def size(self):
