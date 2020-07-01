@@ -26,6 +26,8 @@ class GameOfLife(object):
                 yield "\n"
         return "".join(_cells())
 
+    def next(self):
+        return GameOfLife(".........")
 
 
 def board(board):
@@ -53,3 +55,9 @@ expect(repr(board("..."
                   "..."))) == ("..."
                                ".#."
                                "...")
+
+expect(repr(board("..."
+                  ".#."
+                  "...").next())) == ("..."
+                                      "..."
+                                      "...")
