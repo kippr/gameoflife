@@ -22,7 +22,7 @@ class GameOfLife(object):
             yield "\n"
 
     def __repr__(self):
-        "".join(self.cells())
+        return "".join(self.cells())
         return "...\n...\n...\n"
 
 
