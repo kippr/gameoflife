@@ -19,6 +19,8 @@ class GameOfLife(object):
         yield ""
 
     def __repr__(self):
+        for c in self.cells():
+            pass
         return "...\n...\n...\n"
 
 
