@@ -52,3 +52,7 @@ expect(str(board("..."
 print(board("..."
             ".#."
             "..."))
+
+expect(repr(board("..."
+                  ".#."
+                  "..."))) == "....#...."
