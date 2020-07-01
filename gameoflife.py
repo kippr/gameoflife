@@ -23,7 +23,6 @@ class GameOfLife(object):
 
     def __repr__(self):
         return "".join(self.cells())
-        return "...\n...\n...\n"
 
 
 def board(board):
