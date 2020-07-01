@@ -49,9 +49,9 @@ expect(str(board("..."
                  "..."))) == "...\n...\n...\n"
 
 
-print(board("..."
+print(repr(board("..."
             ".#."
-            "..."))
+            "...")))
 
 expect(repr(board("..."
                   ".#."
