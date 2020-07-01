@@ -14,6 +14,6 @@ def board(board):
     return GameOfLife(board)
 
 
-board("..."
-      "..."
-      "...").size == 3
+expect(board("..."
+             "..."
+             "...").size) == 3
