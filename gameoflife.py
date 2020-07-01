@@ -3,5 +3,9 @@ print("hello mum")
 
 
 class GameOfLife(object):
-    def __init__(board):
+    def __init__(self, board):
         self.board = board
+
+    @property
+    def size(self):
+        return 3
