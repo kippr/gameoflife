@@ -7,6 +7,7 @@ class GameOfLife(object):
         self.board = board
         self.size = math.sqrt(len(board))
         assert set(board).issubset(set('.#')), "Pass board as string of . (dead) and # (alive)"
+        self.board = [[0,0,0], [0,0,0], [0,0,0]]
 
 
 def board(board):
@@ -16,3 +17,7 @@ def board(board):
 expect(board("..."
              "..."
              "...").size) == 3
+
+expect(board("..."
+             "..."
+             "...").board) == [[0,0,0], [0,0,0], [0,0,0]]
