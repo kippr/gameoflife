@@ -16,12 +16,16 @@ class GameOfLife(object):
         return len(self.board)
 
     def __repr__(self):
+        return str(self).replace('\n', '')
+
+    def __str__(self):
         def _cells():
             for row in self.board:
                 for cell in row:
                     yield "#" if cell else '.'
                 yield "\n"
         return "".join(_cells())
+
 
 
 def board(board):
