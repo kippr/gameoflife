@@ -9,3 +9,11 @@ class GameOfLife(object):
     @property
     def size(self):
         return 3
+
+def board(board):
+    return GameOfLife(board)
+
+
+board("..."
+      "..."
+      "...").size == 3
