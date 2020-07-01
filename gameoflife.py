@@ -16,11 +16,12 @@ class GameOfLife(object):
         return len(self.board)
 
     def cells(self):
-        yield ""
+        for row in self.board:
+            for cell in row:
+                yield "#" if cell else '.'
+            yield "\n"
 
     def __repr__(self):
-        for c in self.cells():
-            pass
         "".join(self.cells())
         return "...\n...\n...\n"
 
