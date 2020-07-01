@@ -7,12 +7,9 @@ class GameOfLife(object):
         self.board = board
         self.size = int(math.sqrt(len(board)))
         assert set(board).issubset(set('.#')), "Pass board as string of . (dead) and # (alive)"
-        if '#' in board:
-            self.board = [[1 if board[(y * self.size) + x] == '#' else 0
-                           for x in range(self.size)]
-                         for y in range(self.size)]
-        else:
-            self.board = [[0,0,0], [0,0,0], [0,0,0]]
+        self.board = [[1 if board[(y * self.size) + x] == '#' else 0
+                       for x in range(self.size)]
+                     for y in range(self.size)]
 
 
 def board(board):
