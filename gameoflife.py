@@ -4,7 +4,6 @@ from expecter import expect
 
 class GameOfLife(object):
     def __init__(self, board):
-        self.board = board
         size = int(math.sqrt(len(board)))
         assert size * size == len(board), 'Pass a square board please'
         assert set(board).issubset(set('.#')), "Pass board as string of . (dead) and # (alive)"
