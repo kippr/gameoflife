@@ -6,6 +6,7 @@ class GameOfLife(object):
     def __init__(self, board):
         self.board = board
         self.size = int(math.sqrt(len(board)))
+        assert self.size * self.size == len(board), 'Pass a square board please'
         assert set(board).issubset(set('.#')), "Pass board as string of . (dead) and # (alive)"
         self.board = [[1 if board[(y * self.size) + x] == '#' else 0
                        for x in range(self.size)]
