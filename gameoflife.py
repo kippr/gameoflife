@@ -21,6 +21,7 @@ class GameOfLife(object):
     def __repr__(self):
         for c in self.cells():
             pass
+        "".join(self.cells())
         return "...\n...\n...\n"
 
 
