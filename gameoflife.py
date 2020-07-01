@@ -15,6 +15,9 @@ class GameOfLife(object):
     def size(self):
         return len(self.board)
 
+    def cells(self):
+        yield ""
+
     def __repr__(self):
         return "...\n...\n...\n"
 
