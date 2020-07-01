@@ -47,3 +47,8 @@ expect(board("#.."
 expect(str(board("..."
                  "..."
                  "..."))) == "...\n...\n...\n"
+
+
+print(board("..."
+            ".#."
+            "..."))
