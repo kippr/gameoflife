@@ -15,14 +15,14 @@ class GameOfLife(object):
     def size(self):
         return len(self.board)
 
-    def cells(self):
-        for row in self.board:
-            for cell in row:
-                yield "#" if cell else '.'
-            yield "\n"
 
     def __repr__(self):
-        return "".join(self.cells())
+        def _cells():
+            for row in self.board:
+                for cell in row:
+                    yield "#" if cell else '.'
+                yield "\n"
+        return "".join(_cells())
 
 
 def board(board):
