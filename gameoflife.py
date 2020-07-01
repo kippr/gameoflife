@@ -3,4 +3,5 @@ print("hello mum")
 
 
 class GameOfLife(object):
-    pass
+    def __init__(board):
+        self.board = board
