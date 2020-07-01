@@ -5,12 +5,16 @@ from expecter import expect
 class GameOfLife(object):
     def __init__(self, board):
         self.board = board
-        self.size = int(math.sqrt(len(board)))
-        assert self.size * self.size == len(board), 'Pass a square board please'
+        size = int(math.sqrt(len(board)))
+        assert size * size == len(board), 'Pass a square board please'
         assert set(board).issubset(set('.#')), "Pass board as string of . (dead) and # (alive)"
-        self.board = [[1 if board[(y * self.size) + x] == '#' else 0
-                       for x in range(self.size)]
-                     for y in range(self.size)]
+        self.board = [[1 if board[(y * size) + x] == '#' else 0
+                       for x in range(size)]
+                     for y in range(size)]
+
+    @property
+    def size(self):
+        return len(self.board)
 
 
 def board(board):
