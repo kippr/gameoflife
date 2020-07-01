@@ -15,7 +15,6 @@ class GameOfLife(object):
     def size(self):
         return len(self.board)
 
-
     def __repr__(self):
         def _cells():
             for row in self.board:
