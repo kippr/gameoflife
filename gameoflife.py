@@ -30,6 +30,7 @@ class GameOfLife(object):
         return GameOfLife(".........")
 
     def _neighbours(self, x, y):
+        yield self.board[x - 1][y - 1]
         return []
 
     def neighbour_count(self, x, y):
