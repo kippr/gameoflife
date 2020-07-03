@@ -40,8 +40,7 @@ class GameOfLife(object):
         yield self.board[x + 1][y + 1]
 
     def neighbour_count(self, x, y):
-        sum(self._neighbours(x, y))
-        return 3
+        return sum(self._neighbours(x, y))
 
 
 def board(board):
