@@ -38,7 +38,10 @@ class GameOfLife(object):
 
     def next(self):
         next = GameOfLife("")
-        next.board = [[0,0,0],[0,0,0],[0,0,0]]
+        rows = []
+        for y, row in enumerate(self.board):
+            rows.append([0,0,0])
+        next.board = rows
         return next
 
     def neighbour_count(self, x, y):
