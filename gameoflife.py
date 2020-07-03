@@ -65,6 +65,6 @@ expect(repr(board("..."
                                       "..."
                                       "...")
 
-expect(board("..."
-             "..."
-             "...").neighbour_count(1,1)) == 3
+expect(board("#.."
+             "..#"
+             ".#.").neighbour_count(1,1)) == 3
