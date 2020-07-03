@@ -29,7 +29,11 @@ class GameOfLife(object):
     def next(self):
         return GameOfLife(".........")
 
+    def _neighbours(self, x, y):
+        return []
+
     def neighbour_count(self, x, y):
+        sum(self._neighbours(x, y))
         return 3
 
 
