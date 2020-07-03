@@ -46,8 +46,9 @@ class GameOfLife(object):
         for y, row in enumerate(self.board):
             rows.append([])
             for x, cell in enumerate(row):
-                if sum(_neighbours(self.board, x, y)) < 2:
-                    rows[-1].append(0)
+                neighbours = sum(_neighbours(self.board, x, y))
+                if cell and neighbours in (2, 3):
+                    rows[-1].append(1)
                 else:
                     rows[-1].append(0)
         next.board = rows
@@ -88,6 +89,12 @@ expect(repr(board("..."
                   "...").next())) == ("..."
                                       "..."
                                       "...")
+
+expect(repr(board(".#."
+                  ".#."
+                  ".#.").next())) == (".#."
+                                      ".#."
+                                      ".#.")
 
 expect(board("#.."
              "..#"
