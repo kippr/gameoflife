@@ -1,27 +1,19 @@
 import math
 from expecter import expect
 
+
 def _neighbours(board, x, y):
     size = len(board)
-    yield board[x - 1][y - 1]
-    yield board[x][y - 1]
-    if x + 1 < len(board):
-        yield board[x + 1][y - 1]
-        yield board[x + 1][y]
-        if y + 1 < len(board):
-            yield board[x + 1][y + 1]
-        else:
-            yield board[x + 1][-1]
-    else:
-        yield board[-1][y - 1]
-        yield board[-1][y]
-        if y + 1 < len(board):
-            yield board[-1][y + 1]
-        else:
-            yield board[-1][-1]
-    yield board[x - 1][y]
-    yield board[x - 1][y + 1]
-    yield board[x][y + 1]
+    def val(x, y):
+        return board[x][y]
+    yield val(x - 1, y - 1)
+    yield val(x, y - 1)
+    yield val(x + 1, y - 1)
+    yield val(x - 1, y)
+    yield val(x + 1, y)
+    yield val(x - 1, y + 1)
+    yield val(x, y + 1)
+    yield val(x + 1, y + 1)
 
 
 class GameOfLife(object):
