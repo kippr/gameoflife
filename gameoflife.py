@@ -31,7 +31,13 @@ class GameOfLife(object):
 
     def _neighbours(self, x, y):
         yield self.board[x - 1][y - 1]
-        return []
+        yield self.board[x][y - 1]
+        yield self.board[x + 1][y - 1]
+        yield self.board[x - 1][y]
+        yield self.board[x + 1][y]
+        yield self.board[x - 1][y + 1]
+        yield self.board[x][y + 1]
+        yield self.board[x + 1][y + 1]
 
     def neighbour_count(self, x, y):
         sum(self._neighbours(x, y))
