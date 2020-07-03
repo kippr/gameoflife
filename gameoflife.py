@@ -46,7 +46,10 @@ class GameOfLife(object):
         for y, row in enumerate(self.board):
             rows.append([])
             for x, cell in enumerate(row):
-                rows[-1].append(0)
+                if sum(_neighbours(self.board, x, y)) < 2:
+                    rows[-1].append(0)
+                else:
+                    rows[-1].append(0)
         next.board = rows
         return next
 
