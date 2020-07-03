@@ -7,11 +7,17 @@ def _neighbours(board, x, y):
     if x + 1 < len(board):
         yield board[x + 1][y - 1]
         yield board[x + 1][y]
-        yield board[x + 1][y + 1]
+        if y + 1 < len(board):
+            yield board[x + 1][y + 1]
+        else:
+            yield board[x + 1][-1]
     else:
         yield board[-1][y - 1]
         yield board[-1][y]
-        yield board[-1][y + 1]
+        if y + 1 < len(board):
+            yield board[-1][y + 1]
+        else:
+            yield board[-1][-1]
     yield board[x - 1][y]
     yield board[x - 1][y + 1]
     yield board[x][y + 1]
