@@ -2,6 +2,7 @@ import math
 from expecter import expect
 
 def _neighbours(board, x, y):
+    size = len(board)
     yield board[x - 1][y - 1]
     yield board[x][y - 1]
     if x + 1 < len(board):
