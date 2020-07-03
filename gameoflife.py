@@ -27,6 +27,8 @@ class GameOfLife(object):
         return "".join(_cells())
 
     def next(self):
+        next = GameOfLife("")
+        next.board = [[0,0,0],[0,0,0],[0,0,0]]
         return GameOfLife(".........")
 
     def _neighbours(self, x, y):
