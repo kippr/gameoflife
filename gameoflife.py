@@ -29,7 +29,7 @@ class GameOfLife(object):
     def next(self):
         next = GameOfLife("")
         next.board = [[0,0,0],[0,0,0],[0,0,0]]
-        return GameOfLife(".........")
+        return next
 
     def _neighbours(self, x, y):
         yield self.board[x - 1][y - 1]
