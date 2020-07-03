@@ -40,9 +40,9 @@ class GameOfLife(object):
         next = GameOfLife("")
         rows = []
         for y, row in enumerate(self.board):
+            rows.append([])
             for x, cell in enumerate(row):
-                pass
-            rows.append([0,0,0])
+                rows[-1].append(0)
         next.board = rows
         return next
 
