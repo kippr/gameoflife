@@ -95,6 +95,11 @@ expect(repr(board(".#."
                   ".#.").next())) == (".#."
                                       ".#."
                                       ".#.")
+expect(repr(board("..."
+                  "##."
+                  "..#").next())) == ("..."
+                                      "##."
+                                      "..#")
 
 expect(board("#.."
              "..#"
