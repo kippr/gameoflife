@@ -1,6 +1,16 @@
 import math
 from expecter import expect
 
+def _neighbours(board, x, y):
+    yield board[x - 1][y - 1]
+    yield board[x][y - 1]
+    yield board[x + 1][y - 1]
+    yield board[x - 1][y]
+    yield board[x + 1][y]
+    yield board[x - 1][y + 1]
+    yield board[x][y + 1]
+    yield board[x + 1][y + 1]
+
 
 class GameOfLife(object):
     def __init__(self, board):
@@ -31,18 +41,8 @@ class GameOfLife(object):
         next.board = [[0,0,0],[0,0,0],[0,0,0]]
         return next
 
-    def _neighbours(self, x, y):
-        yield self.board[x - 1][y - 1]
-        yield self.board[x][y - 1]
-        yield self.board[x + 1][y - 1]
-        yield self.board[x - 1][y]
-        yield self.board[x + 1][y]
-        yield self.board[x - 1][y + 1]
-        yield self.board[x][y + 1]
-        yield self.board[x + 1][y + 1]
-
     def neighbour_count(self, x, y):
-        return sum(self._neighbours(x, y))
+        return sum(_neighbours(self.board, x, y))
 
 
 def board(board):
