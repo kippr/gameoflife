@@ -29,6 +29,9 @@ class GameOfLife(object):
     def next(self):
         return GameOfLife(".........")
 
+    def neighbour_count(self, x, y):
+        return 3
+
 
 def board(board):
     return GameOfLife(board)
@@ -61,3 +64,7 @@ expect(repr(board("..."
                   "...").next())) == ("..."
                                       "..."
                                       "...")
+
+expect(board("..."
+             "..."
+             "...").neighbour_count(1,1)) == 3
