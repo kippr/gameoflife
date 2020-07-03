@@ -4,12 +4,17 @@ from expecter import expect
 def _neighbours(board, x, y):
     yield board[x - 1][y - 1]
     yield board[x][y - 1]
-    yield board[x + 1][y - 1]
+    if x + 1 < len(board):
+        yield board[x + 1][y - 1]
+        yield board[x + 1][y]
+        yield board[x + 1][y + 1]
+    else:
+        yield board[-1][y - 1]
+        yield board[-1][y]
+        yield board[-1][y + 1]
     yield board[x - 1][y]
-    yield board[x + 1][y]
     yield board[x - 1][y + 1]
     yield board[x][y + 1]
-    yield board[x + 1][y + 1]
 
 
 class GameOfLife(object):
