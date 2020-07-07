@@ -44,13 +44,16 @@ class GameOfLife(object):
         next = GameOfLife("")
         rows = []
         for y, row in enumerate(self.board):
+            to_print = ""
             rows.append([])
             for x, cell in enumerate(row):
                 neighbours = sum(_neighbours(self.board, x, y))
+                to_print = to_print + str(neighbours)
                 if cell and neighbours in (2, 3):
                     rows[-1].append(1)
                 else:
                     rows[-1].append(0)
+            print(to_print)
         next.board = rows
         return next
 
