@@ -5,7 +5,7 @@ from expecter import expect
 def _neighbours(board, x, y):
     size = len(board)
     def val(x, y):
-        return board[x % size][y % size]
+        return board[y % size][x % size]
     yield val(x - 1, y - 1)
     yield val(x, y - 1)
     yield val(x + 1, y - 1)
