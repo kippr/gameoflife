@@ -130,9 +130,8 @@ c = ("##.."
 d = ("##.."
      ".##."
      "...."
-     "....")
-#expect(repr(board(c).next())) == d
-repr(board(c).next())
+     "##..")
+expect(repr(board(c).next())) == d
 
 v = ("....."
      "..#.."
