@@ -63,9 +63,6 @@ class GameOfLife(object):
         next.board = rows
         return next
 
-    def neighbour_count(self, x, y):
-        return sum(_neighbours(self.board, x, y))
-
     def __iter__(self):
         board = self
         while True:
@@ -99,10 +96,6 @@ expect(repr(board("..."
                   "..."))) == ("..."
                                ".#."
                                "...")
-
-expect(board("#.."
-             "..#"
-             ".#.").neighbour_count(1,1)) == 3
 
 
 expect(repr(board("..."
