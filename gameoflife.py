@@ -107,6 +107,12 @@ first = ("...."
          "....")
 expect(repr(board(first).next())) == first
 
+first = ("...."
+         ".##."
+         ".#.."
+         "....")
+expect(repr(board(first).next())) == first
+
 expect(board("#.."
              "..#"
              ".#.").neighbour_count(1,1)) == 3
