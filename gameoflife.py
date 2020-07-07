@@ -132,6 +132,7 @@ d = ("##.."
      "...."
      "....")
 #expect(repr(board(c).next())) == d
+repr(board(c).next())
 
 v = ("....."
      "..#.."
