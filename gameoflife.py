@@ -1,4 +1,5 @@
 import math
+from itertools import islice
 from expecter import expect
 
 
