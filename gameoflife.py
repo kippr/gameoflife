@@ -69,21 +69,6 @@ def board(board):
     return GameOfLife(board)
 
 
-
-expect(board("..."
-             "..."
-             "...").size) == 3
-
-
-expect(board("..."
-             "..."
-             "...").board) == [[0,0,0], [0,0,0], [0,0,0]]
-
-
-expect(board("#.."
-             ".#."
-             "..#").board) == [[1,0,0], [0,1,0], [0,0,1]]
-
 expect(str(board("..."
 
                  "..."
@@ -102,19 +87,6 @@ expect(repr(board("..."
                   "...").next())) == ("..."
                                       "..."
                                       "...")
-
-
-expect(repr(board(".#."
-                  ".#."
-                  ".#.").next())) == ("###"
-                                      "###"
-                                      "###")
-
-expect(repr(board("..."
-                  "##."
-                  "..#").next())) == ("###"
-                                      "###"
-                                      "###")
 
 
 a = ("...."
