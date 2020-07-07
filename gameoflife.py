@@ -66,6 +66,12 @@ class GameOfLife(object):
     def neighbour_count(self, x, y):
         return sum(_neighbours(self.board, x, y))
 
+    def __iter__(self):
+        board = self
+        while True:
+            yield board
+            board = board.next()
+
 
 def board(board):
     return GameOfLife(board)
@@ -146,9 +152,4 @@ h = ("....."
      "....."
      ".....")
 
-board = board(v)
-results = []
-for x in [1,2,3,4]:
-    board = board.next()
-    results.append(repr(board))
-expect(results) == [h,v,h,v]
+expect([repr(b) for b in islice(iter(board(v)), 4)]) == [v,h,v,h]
