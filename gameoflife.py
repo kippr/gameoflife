@@ -105,7 +105,6 @@ first = ("...."
          ".##."
          ".##."
          "....")
-
 expect(repr(board(first).next())) == first
 
 expect(board("#.."
