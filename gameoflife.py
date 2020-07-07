@@ -62,6 +62,7 @@ def board(board):
     return GameOfLife(board)
 
 
+
 expect(board("..."
              "..."
              "...").size) == 3
@@ -83,6 +84,11 @@ expect(repr(board("..."
                   "..."))) == ("..."
                                ".#."
                                "...")
+
+expect(board("#.."
+             "..#"
+             ".#.").neighbour_count(1,1)) == 3
+
 
 expect(repr(board("..."
                   ".#."
@@ -113,6 +119,8 @@ b = ("...."
      "....")
 expect(repr(board(b).next())) == b
 
-expect(board("#.."
-             "..#"
-             ".#.").neighbour_count(1,1)) == 3
+c = ("...."
+     "...."
+     "...."
+     "....")
+
