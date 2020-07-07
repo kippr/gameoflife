@@ -1,6 +1,7 @@
 import math
 from itertools import islice
 from expecter import expect
+import sys
 
 
 def _neighbours(board, x, y):
@@ -120,3 +121,9 @@ def tests():
          ".....")
 
     expect([repr(b) for b in islice(iter(board(v)), 4)]) == [v,h,v,h]
+
+
+if len(sys.argv) > 1:
+    pass
+else:
+    tests()
