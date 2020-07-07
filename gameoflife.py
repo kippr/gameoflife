@@ -124,6 +124,9 @@ def tests():
 
 
 if len(sys.argv) > 1:
-    pass
+    for b in iter(board(sys.argv[1])):
+        print(str(b))
+        print("")
+        input("")
 else:
     tests()
