@@ -74,17 +74,21 @@ expect(board("..."
              "..."
              "...").size) == 3
 
+
 expect(board("..."
              "..."
              "...").board) == [[0,0,0], [0,0,0], [0,0,0]]
+
 
 expect(board("#.."
              ".#."
              "..#").board) == [[1,0,0], [0,1,0], [0,0,1]]
 
 expect(str(board("..."
+
                  "..."
                  "..."))) == "...\n...\n...\n"
+
 
 expect(repr(board("..."
                   ".#."
@@ -99,23 +103,25 @@ expect(repr(board("..."
                                       "..."
                                       "...")
 
+
 expect(repr(board(".#."
                   ".#."
                   ".#.").next())) == ("###"
                                       "###"
                                       "###")
+
 expect(repr(board("..."
                   "##."
                   "..#").next())) == ("###"
                                       "###"
                                       "###")
 
+
 a = ("...."
      ".##."
      ".##."
      "....")
 expect(repr(board(a).next())) == a
-
 
 
 c = ("##.."
