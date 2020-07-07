@@ -124,13 +124,13 @@ b = ("...."
      "....")
 expect(repr(board(b).next())) == b
 
+
 c = ("##.."
      ".#.."
      ".#.."
      "....")
-d = ("#..."
+d = ("##.."
      ".#.."
-     ".#.."
+     "...."
      "....")
-
-#expect(repr(board(c).next())) == d
+expect(repr(board(c).next())) == d
