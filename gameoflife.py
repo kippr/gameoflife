@@ -133,4 +133,4 @@ d = ("#..."
      ".#.."
      "....")
 
-expect(repr(board(c).next())) == d
+#expect(repr(board(c).next())) == d
