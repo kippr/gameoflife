@@ -101,17 +101,17 @@ expect(repr(board("..."
                                       "##."
                                       "..#")
 
-first = ("...."
-         ".##."
-         ".##."
-         "....")
-expect(repr(board(first).next())) == first
+a = ("...."
+     ".##."
+     ".##."
+     "....")
+expect(repr(board(a).next())) == a
 
-first = ("...."
-         ".##."
-         ".#.."
-         "....")
-expect(repr(board(first).next())) == first
+b = ("...."
+     ".##."
+     ".#.."
+     "....")
+expect(repr(board(b).next())) == b
 
 expect(board("#.."
              "..#"
