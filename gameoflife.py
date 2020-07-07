@@ -42,6 +42,7 @@ class GameOfLife(object):
 
     def next(self):
         next = GameOfLife("")
+        print("\n")
         rows = []
         for y, row in enumerate(self.board):
             to_print = ""
